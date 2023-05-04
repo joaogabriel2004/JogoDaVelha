@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            height: 20px;
+            width: 20px;
+        }
+    </style>
+</head>
+
+<body id="bodyy">
+
+    <div>
+        <h1 id="titulo">Vez do Jogador 1</h1>
+    </div>
+    <div>
+        <button id="pos1" class="botao" onclick="p1 ()"></button>
+        <button id="pos2" class="botao" onclick="p2 ()"></button>
+        <button id="pos3" class="botao" onclick="p3 ()"></button>
+    </div>
+    <div>
+        <button id="pos4" class="botao" onclick="p4 ()"></button>
+        <button id="pos5" class="botao" onclick="p5 ()"></button>
+        <button id="pos6" class="botao" onclick="p6 ()"></button>
+    </div>
+    <div>
+        <button id="pos7" class="botao" onclick="p7 ()"></button>
+        <button id="pos8" class="botao" onclick="p8 ()"></button>
+        <button id="pos9" class="botao" onclick="p9 ()"></button>
+    </div>
+
+
+</body>
+<script>
+    var jogada = 0;
+    var po1 = 0
+    var po2 = 0
+    var po3 = 0
+    var po4 = 0
+    var po5 = 0
+    var po6 = 0
+    var po7 = 0
+    var po8 = 0
+    var po9 = 0
+
+    function p1() {
+        if (jogada % 2 == 1) {
+            document.getElementById("pos1").style.backgroundColor = "blue"
+            jogada++
+            console.log(jogada)
+            document.getElementById("titulo").innerHTML = "Vez do Jogador 1"
+            document.getElementById("pos1").disabled = true
+            po1 = 1
+            if (jogada >= 5) {
+                if (po1 == 1 && po2 == 1 && po3 == 1 || po4 == 1 && po5 == 1 && po6 == 1 || po7 == 1 && po8 == 1 &&
+                    po9 == 1 || po1 == 1 && po5 == 1 && po9 == 1 || po3 == 1 && po5 == 1 && po7 == 1 || po1 == 1 &&
+                    po4 == 1 && po7 || po2 == 1 && po5 == 1 && po8 == 1 || po3 == 1 && po6 == 1 && po9 == 1) {
+                    console.log("Ganhou 2")
+                    document.getElementById("titulo").innerHTML = "O Jogador 2 Venceu!"
+                }
+            }
+        } else {
+            document.getElementById("pos1").style.backgroundColor = "red"
+            jogada++
+            console.log(jogada)
+            document.getElementById("titulo").innerHTML = "Vez do Jogador 2"
+            document.getElementById("pos1").disabled = true
+            po1 = 2
+            if (jogada >= 5) {
+                if (po1 == 2 && po2 == 2 && po3 == 2 || po4 == 2 && po5 == 2 && po6 == 2 || po7 == 2 && po8 == 2 &&
+                    po9 == 2 || po1 == 2 && po5 == 2 && po9 == 2 || po3 == 2 && po5 == 2 && po7 == 2 || po1 == 2 &&
+                    po4 == 2 && po7 || po2 == 2 && po5 == 2 && po8 == 2 || po3 == 2 && po6 == 2 && po9 == 2) {
+                    console.log("Ganhou 1")
+                    document.getElementById("titulo").innerHTML = "O Jogador 1 Venceu!"
+                }
+            }
+        }
+
+    }
+
+    function p2() {
+        if (jogada % 2 == 1) {
+            document.getElementById("pos2").style.backgroundColor = "blue"
+            jogada++
+            console.log(jogada)
+            document.getElementById("titulo").innerHTML = "Vez do Jogador 1"
+            document.getElementById("pos2").disabled = true
+            po2 = 1;
+            if (jogada >= 5) {
+                if (po1 == 1 && po2 == 1 && po3 == 1 || po4 == 1 && po5 == 1 && po6 == 1 || po7 == 1 && po8 == 1 &&
+                    po9 == 1 || po1 == 1 && po5 == 1 && po9 == 1 || po3 == 1 && po5 == 1 && po7 == 1 || po1 == 1 &&
+                    po4 == 1 && po7 || po2 == 1 && po5 == 1 && po8 == 1 || po3 == 1 && po6 == 1 && po9 == 1) {
+                    console.log("Ganhou 2")
+                    document.getElementById("titulo").innerHTML = "O Jogador 2 Venceu!"
+                }
+            }
+        } else {
+            document.getElementById("pos2").style.backgroundColor = "red"
+            jogada++
+            console.log(jogada)
+            document.getElementById("titulo").innerHTML = "Vez do Jogador 2"
+            document.getElementById("pos2").disabled = true
+            po2 = 2;
+            if (jogada >= 5) {
+                if (po1 == 2 && po2 == 2 && po3 == 2 || po4 == 2 && po5 == 2 && po6 == 2 || po7 == 2 && po8 == 2 &&
+                    po9 == 2 || po1 == 2 && po5 == 2 && po9 == 2 || po3 == 2 && po5 == 2 && po7 == 2 || po1 == 2 &&
+                    po4 == 2 && po7 || po2 == 2 && po5 == 2 && po8 == 2 || po3 == 2 && po6 == 2 && po9 == 2) {
+                    console.log("Ganhou 1")
+                    document.getElementById("titulo").innerHTML = "O Jogador 1 Venceu!"
+                }
+            }
+        }
+    }
+
+    function p3() {
+        if (jogada % 2 == 1) {
+            document.getElementById("pos3").style.backgroundColor = "blue"
+            jogada++
+            console.log(jogada)
+            document.getElementById("titulo").innerHTML = "Vez do Jogador 1"
+            document.getElementById("pos3").disabled = true
+            po3 = 1;
+            if (jogada >= 5) {
+                if (po1 == 1 && po2 == 1 && po3 == 1 || po4 == 1 && po5 == 1 && po6 == 1 || po7 == 1 && po8 == 1 &&
+                    po9 == 1 || po1 == 1 && po5 == 1 && po9 == 1 || po3 == 1 && po5 == 1 && po7 == 1 || po1 == 1 &&
+                    po4 == 1 && po7 || po2 == 1 && po5 == 1 && po8 == 1 || po3 == 1 && po6 == 1 && po9 == 1) {
+                    console.log("Ganhou 2")
+                    document.getElementById("titulo").innerHTML = "O Jogador 2 Venceu!"
+                }
+            }
+        } else {
+            document.getElementById("pos3").style.backgroundColor = "red"
+            jogada++
+            console.log(jogada)
+            document.getElementById("titulo").innerHTML = "Vez do Jogador 2"
+            document.getElementById("pos3").disabled = true
+            po3 = 2;
+            if (jogada >= 5) {
+                if (po1 == 2 && po2 == 2 && po3 == 2 || po4 == 2 && po5 == 2 && po6 == 2 || po7 == 2 && po8 == 2 &&
+                    po9 == 2 || po1 == 2 && po5 == 2 && po9 == 2 || po3 == 2 && po5 == 2 && po7 == 2 || po1 == 2 &&
+                    po4 == 2 && po7 || po2 == 2 && po5 == 2 && po8 == 2 || po3 == 2 && po6 == 2 && po9 == 2) {
+                    console.log("Ganhou 1")
+                    document.getElementById("titulo").innerHTML = "O Jogador 1 Venceu!"
+                }
+            }
+        }
+    }
+
+    function p4() {
+        if (jogada % 2 == 1) {
+            document.getElementById("pos4").style.backgroundColor = "blue"
+            jogada++
+            console.log(jogada)
+            document.getElementById("titulo").innerHTML = "Vez do Jogador 1"
+            document.getElementById("pos4").disabled = true
+            po4 = 1;
+            if (jogada >= 5) {
+                if (po1 == 1 && po2 == 1 && po3 == 1 || po4 == 1 && po5 == 1 && po6 == 1 || po7 == 1 && po8 == 1 &&
+                    po9 == 1 || po1 == 1 && po5 == 1 && po9 == 1 || po3 == 1 && po5 == 1 && po7 == 1 || po1 == 1 &&
+                    po4 == 1 && po7 || po2 == 1 && po5 == 1 && po8 == 1 || po3 == 1 && po6 == 1 && po9 == 1) {
+                    console.log("Ganhou 2")
+                    document.getElementById("titulo").innerHTML = "O Jogador 2 Venceu!"
+                }
+            }
+        } else {
+            document.getElementById("pos4").style.backgroundColor = "red"
+            jogada++
+            console.log(jogada)
+            document.getElementById("titulo").innerHTML = "Vez do Jogador 2"
+            document.getElementById("pos4").disabled = true
+            po4 = 2;
+            if (jogada >= 5) {
+                if (po1 == 2 && po2 == 2 && po3 == 2 || po4 == 2 && po5 == 2 && po6 == 2 || po7 == 2 && po8 == 2 &&
+                    po9 == 2 || po1 == 2 && po5 == 2 && po9 == 2 || po3 == 2 && po5 == 2 && po7 == 2 || po1 == 2 &&
+                    po4 == 2 && po7 || po2 == 2 && po5 == 2 && po8 == 2 || po3 == 2 && po6 == 2 && po9 == 2) {
+                    console.log("Ganhou 1")
+                    document.getElementById("titulo").innerHTML = "O Jogador 1 Venceu!"
+                }
+            }
+        }
+    }
+
+    function p5() {
+        if (jogada % 2 == 1) {
+            document.getElementById("pos5").style.backgroundColor = "blue"
+            jogada++
+            console.log(jogada)
+            document.getElementById("titulo").innerHTML = "Vez do Jogador 1"
+            document.getElementById("pos5").disabled = true
+            po5 = 1;
+            if (jogada >= 5) {
+                if (po1 == 1 && po2 == 1 && po3 == 1 || po4 == 1 && po5 == 1 && po6 == 1 || po7 == 1 && po8 == 1 &&
+                    po9 == 1 || po1 == 1 && po5 == 1 && po9 == 1 || po3 == 1 && po5 == 1 && po7 == 1 || po1 == 1 &&
+                    po4 == 1 && po7 || po2 == 1 && po5 == 1 && po8 == 1 || po3 == 1 && po6 == 1 && po9 == 1) {
+                    console.log("Ganhou 2")
+                    document.getElementById("titulo").innerHTML = "O Jogador 2 Venceu!"
+                }
+            }
+        } else {
+            document.getElementById("pos5").style.backgroundColor = "red"
+            jogada++
+            console.log(jogada)
+            document.getElementById("titulo").innerHTML = "Vez do Jogador 2"
+            document.getElementById("pos5").disabled = true
+            po5 = 2;
+            if (jogada >= 5) {
+                if (po1 == 2 && po2 == 2 && po3 == 2 || po4 == 2 && po5 == 2 && po6 == 2 || po7 == 2 && po8 == 2 &&
+                    po9 == 2 || po1 == 2 && po5 == 2 && po9 == 2 || po3 == 2 && po5 == 2 && po7 == 2 || po1 == 2 &&
+                    po4 == 2 && po7 || po2 == 2 && po5 == 2 && po8 == 2 || po3 == 2 && po6 == 2 && po9 == 2) {
+                    console.log("Ganhou 1")
+                    document.getElementById("titulo").innerHTML = "O Jogador 1 Venceu!"
+                }
+            }
+        }
+    }
+
+    function p6() {
+        if (jogada % 2 == 1) {
+            document.getElementById("pos6").style.backgroundColor = "blue"
+            jogada++
+            console.log(jogada)
+            document.getElementById("titulo").innerHTML = "Vez do Jogador 1"
+            document.getElementById("pos6").disabled = true
+            po6 = 1;
+            if (jogada >= 5) {
+                if (po1 == 1 && po2 == 1 && po3 == 1 || po4 == 1 && po5 == 1 && po6 == 1 || po7 == 1 && po8 == 1 &&
+                    po9 == 1 || po1 == 1 && po5 == 1 && po9 == 1 || po3 == 1 && po5 == 1 && po7 == 1 || po1 == 1 &&
+                    po4 == 1 && po7 || po2 == 1 && po5 == 1 && po8 == 1 || po3 == 1 && po6 == 1 && po9 == 1) {
+                    console.log("Ganhou 2")
+                    document.getElementById("titulo").innerHTML = "O Jogador 2 Venceu!"
+                }
+            }
+        } else {
+            document.getElementById("pos6").style.backgroundColor = "red"
+            jogada++
+            console.log(jogada)
+            document.getElementById("titulo").innerHTML = "Vez do Jogador 2"
+            document.getElementById("pos6").disabled = true
+            po6 = 2;
+            if (jogada >= 5) {
+                if (po1 == 2 && po2 == 2 && po3 == 2 || po4 == 2 && po5 == 2 && po6 == 2 || po7 == 2 && po8 == 2 &&
+                    po9 == 2 || po1 == 2 && po5 == 2 && po9 == 2 || po3 == 2 && po5 == 2 && po7 == 2 || po1 == 2 &&
+                    po4 == 2 && po7 || po2 == 2 && po5 == 2 && po8 == 2 || po3 == 2 && po6 == 2 && po9 == 2) {
+                    console.log("Ganhou 1")
+                    document.getElementById("titulo").innerHTML = "O Jogador 1 Venceu!"
+                }
+            }
+        }
+    }
+
+    function p7() {
+        if (jogada % 2 == 1) {
+            document.getElementById("pos7").style.backgroundColor = "blue"
+            jogada++
+            console.log(jogada)
+            document.getElementById("titulo").innerHTML = "Vez do Jogador 1"
+            document.getElementById("pos7").disabled = true
+            po7 = 1;
+            if (jogada >= 5) {
+                if (po1 == 1 && po2 == 1 && po3 == 1 || po4 == 1 && po5 == 1 && po6 == 1 || po7 == 1 && po8 == 1 &&
+                    po9 == 1 || po1 == 1 && po5 == 1 && po9 == 1 || po3 == 1 && po5 == 1 && po7 == 1 || po1 == 1 &&
+                    po4 == 1 && po7 || po2 == 1 && po5 == 1 && po8 == 1 || po3 == 1 && po6 == 1 && po9 == 1) {
+                    console.log("Ganhou 2")
+                    document.getElementById("titulo").innerHTML = "O Jogador 2 Venceu!"
+                }
+            }
+        } else {
+            document.getElementById("pos7").style.backgroundColor = "red"
+            jogada++
+            console.log(jogada)
+            document.getElementById("titulo").innerHTML = "Vez do Jogador 2"
+            document.getElementById("pos7").disabled = true
+            po7 = 2;
+            if (jogada >= 5) {
+                if (po1 == 2 && po2 == 2 && po3 == 2 || po4 == 2 && po5 == 2 && po6 == 2 || po7 == 2 && po8 == 2 &&
+                    po9 == 2 || po1 == 2 && po5 == 2 && po9 == 2 || po3 == 2 && po5 == 2 && po7 == 2 || po1 == 2 &&
+                    po4 == 2 && po7 || po2 == 2 && po5 == 2 && po8 == 2 || po3 == 2 && po6 == 2 && po9 == 2) {
+                    console.log("Ganhou 1")
+                    document.getElementById("titulo").innerHTML = "O Jogador 1 Venceu!"
+                }
+            }
+        }
+    }
+
+    function p8() {
+        if (jogada % 2 == 1) {
+            document.getElementById("pos8").style.backgroundColor = "blue"
+            jogada++
+            console.log(jogada)
+            document.getElementById("titulo").innerHTML = "Vez do Jogador 1"
+            document.getElementById("pos8").disabled = true
+            po8 = 1;
+            if (jogada >= 5) {
+                if (po1 == 1 && po2 == 1 && po3 == 1 || po4 == 1 && po5 == 1 && po6 == 1 || po7 == 1 && po8 == 1 &&
+                    po9 == 1 || po1 == 1 && po5 == 1 && po9 == 1 || po3 == 1 && po5 == 1 && po7 == 1 || po1 == 1 &&
+                    po4 == 1 && po7 || po2 == 1 && po5 == 1 && po8 == 1 || po3 == 1 && po6 == 1 && po9 == 1) {
+                    console.log("Ganhou 2")
+                    document.getElementById("titulo").innerHTML = "O Jogador 2 Venceu!"
+                }
+            }
+        } else {
+            document.getElementById("pos8").style.backgroundColor = "red"
+            jogada++
+            console.log(jogada)
+            document.getElementById("titulo").innerHTML = "Vez do Jogador 2"
+            document.getElementById("pos8").disabled = true
+            po8 = 2;
+            if (jogada >= 5) {
+                if (po1 == 2 && po2 == 2 && po3 == 2 || po4 == 2 && po5 == 2 && po6 == 2 || po7 == 2 && po8 == 2 &&
+                    po9 == 2 || po1 == 2 && po5 == 2 && po9 == 2 || po3 == 2 && po5 == 2 && po7 == 2 || po1 == 2 &&
+                    po4 == 2 && po7 || po2 == 2 && po5 == 2 && po8 == 2 || po3 == 2 && po6 == 2 && po9 == 2) {
+                    console.log("Ganhou 1")
+                    document.getElementById("titulo").innerHTML = "O Jogador 1 Venceu!"
+                }
+            }
+        }
+    }
+
+    function p9() {
+        if (jogada % 2 == 1) {
+            document.getElementById("pos9").style.backgroundColor = "blue"
+            jogada++
+            console.log(jogada)
+            document.getElementById("titulo").innerHTML = "Vez do Jogador 1"
+            document.getElementById("pos9").disabled = true
+            po9 = 1;
+            if (jogada >= 5) {
+                if (po1 == 1 && po2 == 1 && po3 == 1 || po4 == 1 && po5 == 1 && po6 == 1 || po7 == 1 && po8 == 1 &&
+                    po9 == 1 || po1 == 1 && po5 == 1 && po9 == 1 || po3 == 1 && po5 == 1 && po7 == 1 || po1 == 1 &&
+                    po4 == 1 && po7 || po2 == 1 && po5 == 1 && po8 == 1 || po3 == 1 && po6 == 1 && po9 == 1) {
+                    console.log("Ganhou 2")
+                    document.getElementById("titulo").innerHTML = "O Jogador 2 Venceu!"
+                }
+            }
+        } else {
+            document.getElementById("pos9").style.backgroundColor = "red"
+            jogada++
+            console.log(jogada)
+            document.getElementById("titulo").innerHTML = "Vez do Jogador 2"
+            document.getElementById("pos9").disabled = true
+            po9 = 2;
+            if (jogada >= 5) {
+                if (po1 == 2 && po2 == 2 && po3 == 2 || po4 == 2 && po5 == 2 && po6 == 2 || po7 == 2 && po8 == 2 &&
+                    po9 == 2 || po1 == 2 && po5 == 2 && po9 == 2 || po3 == 2 && po5 == 2 && po7 == 2 || po1 == 2 &&
+                    po4 == 2 && po7 || po2 == 2 && po5 == 2 && po8 == 2 || po3 == 2 && po6 == 2 && po9 == 2) {
+                    console.log("Ganhou 1")
+                    document.getElementById("titulo").innerHTML = "O Jogador 1 Venceu!"
+                }
+            }
+        }
+    }
+</script>
+</html>
