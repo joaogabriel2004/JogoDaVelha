@@ -8,8 +8,14 @@
     <title>Document</title>
     <style>
         button {
-            height: 20px;
-            width: 20px;
+            height: 30px;
+            width: 30px;
+            margin: 2px;
+        }
+        body {
+            text-align: center;
+            margin-top: 80px;
+            font-family: Impact;
         }
     </style>
 </head>
@@ -49,6 +55,25 @@
     var po8 = 0
     var po9 = 0
 
+    function jogadaOponente() {
+        if(jogada < 9 && document.getElementById("titulo").innerHTML[0] != "O") {
+            do {
+                q = parseInt(Math.random() * 9) + 1;
+                cor = document.getElementById("pos" + q).style.backgroundColor;
+            } while (cor == "blue" || cor == "red");
+
+            if (q == 1) setTimeout('p1 ()', 300);
+            if (q == 2) setTimeout('p2 ()', 300);
+            if (q == 3) setTimeout('p3 ()', 300);
+            if (q == 4) setTimeout('p4 ()', 300);
+            if (q == 5) setTimeout('p5 ()', 300);
+            if (q == 6) setTimeout('p6 ()', 300);
+            if (q == 7) setTimeout('p7 ()', 300);
+            if (q == 8) setTimeout('p8 ()', 300);
+            if (q == 9) setTimeout('p9 ()', 300);
+        }
+    }
+
     function p1() {
         if (jogada % 2 == 1) {
             document.getElementById("pos1").style.backgroundColor = "blue"
@@ -80,6 +105,7 @@
                     document.getElementById("titulo").innerHTML = "O Jogador 1 Venceu!"
                 }
             }
+            jogadaOponente();
         }
 
     }
@@ -115,6 +141,7 @@
                     document.getElementById("titulo").innerHTML = "O Jogador 1 Venceu!"
                 }
             }
+            jogadaOponente();
         }
     }
 
@@ -149,6 +176,7 @@
                     document.getElementById("titulo").innerHTML = "O Jogador 1 Venceu!"
                 }
             }
+            jogadaOponente();
         }
     }
 
@@ -183,6 +211,7 @@
                     document.getElementById("titulo").innerHTML = "O Jogador 1 Venceu!"
                 }
             }
+            jogadaOponente();
         }
     }
 
@@ -217,6 +246,7 @@
                     document.getElementById("titulo").innerHTML = "O Jogador 1 Venceu!"
                 }
             }
+            jogadaOponente();
         }
     }
 
@@ -251,6 +281,7 @@
                     document.getElementById("titulo").innerHTML = "O Jogador 1 Venceu!"
                 }
             }
+            jogadaOponente();
         }
     }
 
@@ -285,6 +316,7 @@
                     document.getElementById("titulo").innerHTML = "O Jogador 1 Venceu!"
                 }
             }
+            jogadaOponente();
         }
     }
 
@@ -319,6 +351,7 @@
                     document.getElementById("titulo").innerHTML = "O Jogador 1 Venceu!"
                 }
             }
+            jogadaOponente();
         }
     }
 
@@ -353,6 +386,7 @@
                     document.getElementById("titulo").innerHTML = "O Jogador 1 Venceu!"
                 }
             }
+            jogadaOponente();
         }
     }
 </script>
